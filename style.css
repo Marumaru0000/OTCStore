@@ -1,3 +1,4 @@
+/*----------------全体-------------------*/
 header {
   margin-bottom: 20px;
 }
@@ -22,6 +23,7 @@ img {
   cursor: pointer;
   margin-bottom: 10px;
 }
+/*----------------症状から薬を検索する------------------*/
 .symptom-container {
   display: none;
   margin-top: 10px;
@@ -36,7 +38,31 @@ img {
   margin-top: 10px;
   display: none;
 }
-
+/* 画面幅が767px以下の場合のスタイル */
+@media (max-width: 767px) {
+  /* 検索ボタンを上に移動 */
+  #search-button {
+    margin-top: 20px;
+    width: 100%;
+  }
+  /* 症状選択肢のスタイル */
+  .symptom-container {
+    margin-top: 20px;
+    text-align: center;
+  }
+  .symptom {
+    display: inline-block;
+    margin: 10px;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .symptom:hover {
+    background-color: #eee;
+  }
+}
+/*----------------人気商品--------------------*/
 /* 商品画像 */
 .product-image {
     width: 100%;
@@ -65,34 +91,7 @@ img {
     font-weight: 500;
     color: #f14c4c;
   }
-  
-  /* 商品セクションのコンテナ */
-  .product-section {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-top: 30px;
-    margin-bottom: 50px;
-  }
-  
-  /* 商品カード */
-  .product-card {
-    width: 30%;
-    margin-right: 2%;
-  }
-  
-  /* リストのスタイル */
-  .product-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-
-/* フォーム要素のスタイル */
-.form-group {
-  margin-bottom: 1rem;
-}
-
+/*----------------お問い合せ--------------------*/
 /* ラベルのスタイル */
 label {
   display: block;
@@ -100,7 +99,7 @@ label {
   font-weight: bold;
   font-size: 1.2rem;
 }
-
+/*----------------カテゴリーから薬を検索する---------------------*/
 /* セレクトボックスのスタイル */
 select {
   width: 100%;
@@ -138,7 +137,7 @@ button[type="submit"]:focus {
   background-color: #0062cc;
   outline: none;
 }
-
+/*-----------------あなたに最適な薬を検索する--------------------*/
 /* タブのスタイル */
 .nav-tabs {
   margin-bottom: 1rem;
@@ -174,29 +173,83 @@ button[type="submit"]:focus {
   border-top: none;
   background-color: #fff;
 }
+/*-----------------フッター------------------*/
+/* フッター全体 */
+footer {
+  background-color: #f8f9fa;
+  padding: 50px 0;
+  font-size: 14px;
+}
 
+footer h5 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
 
-  footer {
-    background-color: #343a40; /* もとのbg-darkより少し明るく */
-    color: #fff;
-    padding-top: 50px;
-    padding-bottom: 20px;
+footer ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+footer ul li {
+  margin-bottom: 10px;
+}
+
+footer ul li a {
+  color: #6c757d;
+  transition: all 0.3s ease-in-out;
+}
+
+footer ul li a:hover {
+  color: #007bff;
+  text-decoration: none;
+}
+
+footer ul li i {
+  margin-right: 10px;
+  font-size: 16px;
+  color: #007bff;
+}
+
+footer .social-icons {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+footer .social-icons a {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  color: #fff;
+  border-radius: 50%;
+  background-color: #007bff;
+  transition: all 0.3s ease-in-out;
+}
+
+footer .social-icons a:hover {
+  opacity: 0.8;
+  transform: translateY(-2px);
+}
+
+footer .social-icons i {
+  font-size: 20px;
+}
+
+footer .copy {
+  text-align: center;
+  color: #6c757d;
+  margin-top: 30px;
+  font-size: 12px;
+}
+
+@media (max-width: 768px) {
+  footer .social-icons a {
+    margin-right: 0;
   }
-  
-  footer a {
-    color: #c2c2c2; /* リンクの色を変更 */
-  }
-  
-  footer a:hover {
-    color: #fff; /* マウスホバー時のリンクの色を変更 */
-  }
-  
-  footer ul li {
-    list-style: none; /* リストスタイルを変更 */
-  }
-  
-  footer hr {
-    border-top-color: #c2c2c2; /* 水平線のカラーを変更 */
-  }
-  
-  
+}
